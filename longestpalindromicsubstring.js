@@ -15,11 +15,13 @@ for (let i = 0; i < string.length; i++) {
     let tempEnd = i
 
     //continue until you find a character that's not the same as given index
+    //(expand width of center)
     while (string[i] == string[tempEnd + 1]) {
         tempEnd++
     }
 
-    //expand left and rgith as long as the ends are the same
+    //expand left and right as long as the ends are the same
+    //(expand around center)
     while (tempStart >= 0 && tempEnd < string.length && string[tempStart - 1] == string[tempEnd + 1]) {
         tempStart--
         tempEnd++
